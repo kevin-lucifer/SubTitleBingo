@@ -1,6 +1,6 @@
 # SubTitleBingo
 A tool which capable to  adjust your srt subtitle timeline. (Support drag and drop)
-Build by jlink, and package by jlink. So, you can create a self contain running img,easy and small.
+Build by javafx11, and package by jlink. So, you can create a self contain running img,easy and small.
 I'll try to upload the mac img, be my guest to create your own win running img. Leave me a message if I can do anything for you, except
  this one. lol
 
