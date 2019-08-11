@@ -12,7 +12,7 @@ I did hide some easter eggs, eg, plain text encoding auto detect(Thanks to mozil
 
 # Release
 v1.0
-Might be the first and the last release. Depends on my feeling.
-[Download via Google Drive V1.0](https://drive.google.com/file/d/12PEr7OJHRhQWEF6AkP8pEiGsEi7tIJ2W/view?usp=sharing)
-[SubtitleBingo-Mac-V1.0](https://github.com/kevin-lucifer/SubTitleBingo/releases/download/1.0/SubtitleBingo.zip)
+Might be the first and the last release. Depends on my feeling.  
+[Download via Google Drive V1.0](https://drive.google.com/file/d/12PEr7OJHRhQWEF6AkP8pEiGsEi7tIJ2W/view?usp=sharing)  
+[SubtitleBingo-Mac-V1.0](https://github.com/kevin-lucifer/SubTitleBingo/releases/download/1.0/SubtitleBingo.zip)  
 Click the bin\SubtitleBingo, here we go~
