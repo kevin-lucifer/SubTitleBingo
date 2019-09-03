@@ -15,6 +15,7 @@
                 <configuration>
                     <source>11</source>
                     <target>11</target>
+                    <compilerArgs>--add-exports=javafx.base/com.sun.javafx.event=org.controlsfx.controls</compilerArgs>
                 </configuration>
             </plugin>
 
@@ -26,6 +27,11 @@
                     <mainClass>subtitle.Main</mainClass>
                     <executable>/Library/Java/JavaVirtualMachines/jdk-11.0.4.jdk/Contents/Home/bin/java</executable>
                     <launcher>SubtitleBingo</launcher>
+                    <compilerArgs>--add-exports=javafx.base/com.sun.javafx.event=org.controlsfx.controls</compilerArgs>
+                    <options>
+                        <option>--add-opens</option>
+                        <option>javafx.base/com.sun.javafx.event=org.controlsfx.controls</option>
+                    </options>
                 </configuration>
 
             </plugin>
@@ -49,14 +55,14 @@
 
         <!--javafx have been remove since jdk11, add dependency manually-->
         <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-controls</artifactId>
-            <version>11</version>
+            <groupId>org.controlsfx</groupId>
+            <artifactId>controlsfx</artifactId>
+            <version>11.0.0</version>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
-            <version>11</version>
+            <version>11.0.2</version>
         </dependency>
     </dependencies>
 

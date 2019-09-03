@@ -1,4 +1,3 @@
-
 package util;
 
 import java.io.*;
@@ -6,7 +5,6 @@ import java.nio.charset.Charset;
 import java.time.Duration;
 
 /**
- *
  * @author kevin
  * @version $Id: SubTitleFileHandler.java, v 0.1 2019年08月10日 10:25 PM kevin Exp $
  */
@@ -38,6 +36,7 @@ public class SubTitleFileHandler {
 
     /**
      * 根据偏移量循环处理字幕文件
+     *
      * @param ms
      * @throws IOException
      */
@@ -59,6 +58,7 @@ public class SubTitleFileHandler {
 
     /**
      * 根据偏移量处理单行字幕
+     *
      * @param line
      * @param milliSecs
      * @throws IOException
@@ -104,6 +104,7 @@ public class SubTitleFileHandler {
 
     /**
      * 将一个时间段转化为srt字幕的标准时间格式
+     *
      * @param d
      * @return
      */

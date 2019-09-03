@@ -1,11 +1,10 @@
-
 package subtitle.handler;
 
 import javafx.collections.FXCollections;
 import javafx.event.EventHandler;
 import javafx.scene.input.DragEvent;
 import javafx.scene.input.Dragboard;
-import subtitle.controller.Controller;
+import subtitle.controller.MainController;
 import util.FileEncodeDetector;
 
 import java.io.File;
@@ -20,9 +19,9 @@ import java.util.stream.Collectors;
  */
 public class DropFileHandler implements EventHandler<DragEvent> {
 
-    private Controller controller;
+    private MainController controller;
 
-    public DropFileHandler(Controller controller) {
+    public DropFileHandler(MainController controller) {
         this.controller = controller;
     }
 

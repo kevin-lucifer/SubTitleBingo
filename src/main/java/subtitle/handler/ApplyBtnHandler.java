@@ -1,29 +1,26 @@
-
 package subtitle.handler;
 
 import javafx.event.EventHandler;
 import javafx.scene.input.MouseEvent;
-import subtitle.controller.Controller;
+import subtitle.controller.MainController;
 import util.SubTitleFileHandler;
 
 import java.nio.charset.Charset;
 
 /**
- *
  * @author kevin
  * @version $Id: ApplyBtnHandler.java, v 0.1 2019年08月10日 12:56 AM kevin Exp $
  */
 public class ApplyBtnHandler implements EventHandler<MouseEvent> {
 
-    private Controller controller;
+    private MainController controller;
 
-    public ApplyBtnHandler(Controller controller) {
+    public ApplyBtnHandler(MainController controller) {
         this.controller = controller;
     }
 
     /**
-     * Invoked when a specific event of the type for which this handler is
-     * registered happens.
+     * Invoked when a specific event of the type for which this handler is registered happens.
      *
      * @param event the event which occurred
      */

@@ -56,7 +56,7 @@ public class nsDetector extends nsPSMDetector
 
     public boolean DoIt(byte[] aBuf, int aLen, boolean oDontFeedMe) {
 
-		if (aBuf == null || oDontFeedMe) { return false; }
+        if (aBuf == null || oDontFeedMe) { return false; }
 
         this.HandleData(aBuf, aLen);
         return mDone;
@@ -68,7 +68,7 @@ public class nsDetector extends nsPSMDetector
     }
 
     public void Report(String charset) {
-		if (mObserver != null) { mObserver.Notify(charset); }
+        if (mObserver != null) { mObserver.Notify(charset); }
     }
 
     public boolean isAscii(byte[] aBuf, int aLen) {

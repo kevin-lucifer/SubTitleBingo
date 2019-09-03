@@ -9,13 +9,14 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.DragEvent;
 import javafx.scene.input.TransferMode;
 import javafx.scene.layout.Pane;
+import org.controlsfx.control.textfield.TextFields;
 import subtitle.handler.ApplyBtnHandler;
 import subtitle.handler.DropFileHandler;
 import util.EncodingUtil;
 
-public class Controller {
+public class MainController {
     @FXML
-    private Pane             mainPane;
+    private Pane             functionPane;
     @FXML
     private TextField        newFileName;
     @FXML
@@ -31,20 +32,19 @@ public class Controller {
     private String           fullPath;
 
     public final ObjectProperty<EventHandler<? super DragEvent>> onDragDroppedProperty() {
-
-        System.out.println("12345");
+        //do nothing
         return null;
     }
 
     public void onDropedFile() {
-        mainPane.onDragDroppedProperty();
+        functionPane.onDragDroppedProperty();
     }
 
     @FXML
     private void initialize() {
-        mainPane.setOnDragOver(event -> {
+        functionPane.setOnDragOver(event -> {
                     //System.err.println("in on drag over");
-                    if (event.getGestureSource() != mainPane
+                    if (event.getGestureSource() != functionPane
                             && event.getDragboard().hasFiles()) {
                         /* allow for both copying and moving, whatever user chooses */
                         event.acceptTransferModes(TransferMode.COPY_OR_MOVE);
@@ -52,26 +52,28 @@ public class Controller {
                     event.consume();
                 }
         );
-        mainPane.setOnDragDropped(new DropFileHandler(this));
+        functionPane.setOnDragDropped(new DropFileHandler(this));
         apply.setOnMouseClicked(new ApplyBtnHandler(this));
 
         this.srcEncSelector.setItems(EncodingUtil.getSupportedEncodingList());
         this.srcEncSelector.setEditable(true);
+        TextFields.bindAutoCompletion(srcEncSelector.getEditor(), srcEncSelector.getItems());
 
         this.targetEncSelector.setItems(EncodingUtil.getSupportedEncodingList());
         this.targetEncSelector.setEditable(true);
+        TextFields.bindAutoCompletion(targetEncSelector.getEditor(), targetEncSelector.getItems());
 
         this.srcEncSelector.getSelectionModel().select("GB18030");
         this.targetEncSelector.getSelectionModel().select("GB18030");
 
     }
 
-    public Pane getMainPane() {
-        return mainPane;
+    public Pane getFunctionPane() {
+        return functionPane;
     }
 
-    public void setMainPane(Pane mainPane) {
-        this.mainPane = mainPane;
+    public void setFunctionPane(Pane functionPane) {
+        this.functionPane = functionPane;
     }
 
     public TextField getNewFileName() {

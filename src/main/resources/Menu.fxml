@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import java.net.URL?>
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:id="menuBarBox"
+      fx:controller="subtitle.controller.MenuController">
+    <padding>
+        <Insets bottom="0" left="0" right="0" top="0"/>
+    </padding>
+    <MenuBar fx:id="menuBar">
+        <menus>
+            <Menu text="Help">
+                <items>
+                    <MenuItem text="About" onAction="#handleAboutAction"/>
+                    <SeparatorMenuItem/>
+                    <MenuItem text="Exit" onAction="#handleExitAction"/>
+                </items>
+            </Menu>
+        </menus>
+    </MenuBar>
+    <stylesheets>
+        <URL value="@Menu.css"/>
+    </stylesheets>
+</VBox>
+

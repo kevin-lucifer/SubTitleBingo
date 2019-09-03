@@ -261,7 +261,7 @@ public abstract class nsPSMDetector {
                         b, mState[j]);
                 //if (st != 0)
                 //System.out.println( "state(0x" + Integer.toHexString(0xFF&b) +") =>"+ Integer.toHexString(st&0xFF)+ " " +
-				// mVerifier[mItemIdx[j]].charset());
+                // mVerifier[mItemIdx[j]].charset());
 
                 if (st == nsVerifier.eItsMe) {
 
@@ -317,14 +317,14 @@ public abstract class nsPSMDetector {
 
         } // End of for( i=0; i < len ...
 
-		if (mRunSampler) { Sample(aBuf, len); }
+        if (mRunSampler) { Sample(aBuf, len); }
 
         return mDone;
     }
 
     public void DataEnd() {
 
-		if (mDone == true) { return; }
+        if (mDone == true) { return; }
 
         if (mItems == 2) {
             if ((mVerifier[mItemIdx[0]].charset()).equals("GB18030")) {
@@ -336,7 +336,7 @@ public abstract class nsPSMDetector {
             }
         }
 
-		if (mRunSampler) { Sample(null, 0, true); }
+        if (mRunSampler) { Sample(null, 0, true); }
     }
 
     public void Sample(byte[] aBuf, int aLen) {
@@ -349,9 +349,9 @@ public abstract class nsPSMDetector {
         int eucNum = 0;
 
         for (j = 0; j < mItems; j++) {
-			if (null != mStatisticsData[mItemIdx[j]]) { eucNum++; }
-			if ((!mVerifier[mItemIdx[j]].isUCS2()) &&
-					(!(mVerifier[mItemIdx[j]].charset()).equals("GB18030"))) { possibleCandidateNum++; }
+            if (null != mStatisticsData[mItemIdx[j]]) { eucNum++; }
+            if ((!mVerifier[mItemIdx[j]].isUCS2()) &&
+                    (!(mVerifier[mItemIdx[j]].charset()).equals("GB18030"))) { possibleCandidateNum++; }
         }
 
         mRunSampler = (eucNum > 1);
@@ -398,7 +398,7 @@ public abstract class nsPSMDetector {
         }
 
         String ret[] = new String[mItems];
-		for (int i = 0; i < mItems; i++) { ret[i] = mVerifier[mItemIdx[i]].charset(); }
+        for (int i = 0; i < mItems; i++) { ret[i] = mVerifier[mItemIdx[i]].charset(); }
         return ret;
     }
 
