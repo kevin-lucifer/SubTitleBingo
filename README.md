@@ -22,7 +22,7 @@ I did hide some easter eggs, eg, plain text encoding auto detect(Thanks to mozil
 3. Add a menu demo. 
 4. Split all components UI and logic code into standalone fxml and java files.
 ##### Download
-[SubtitleBingo-Mac-V1.1](https://github.com/kevin-lucifer/SubTitleBingo/releases/download/1.0/SubtitleBingo.zip)
+[SubtitleBingo-Mac-V1.1](https://github.com/kevin-lucifer/SubTitleBingo/releases/download/1.1/SubtitleBingo-Mac-V1.1.zip)
 
 ### v1.0    
 Might be the first and the last release. Depends on my mood.    
